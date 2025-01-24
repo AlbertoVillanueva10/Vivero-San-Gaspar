@@ -1,0 +1,138 @@
+/* Reset global */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Se puede cambiar por cualquier fuente */
+    line-height: 1.6;
+    background-color: #fff; /* Fondo blanco por defecto */
+    color: #333; /* Texto oscuro */
+    font-size: 16px;
+    min-width: 320px; /* Asegura que la página sea usable en móviles */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Los enlaces heredan el color del texto por defecto */
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Asegura que las imágenes sean responsivas */
+}
+
+/* Tipografía base */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif; /* Puedes personalizar las fuentes */
+    font-weight: 700;
+    color: #222;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+/* Contenedores y elementos flexibles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado horizontal */
+    text-align: center;  /* Centra el texto del contenedor*/
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Botones generales */
+button, .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Formulario base */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #007bff;
+}
+
+/* Enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: 600;
+}
+
+/* Respuestas en dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Modo columna en pantallas pequeñas */
+    }
+}
