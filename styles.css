@@ -16,9 +16,35 @@ body {
     min-width: 320px; /* Asegura que la página sea usable en móviles */
 }
 
-a {
+.header{
+    display: flex;
+    max-width: 1200px;
+    align-content: stretch;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header__menu{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.header__logo-img{
+    width: 100px;
+    height: 100px;
+}
+
+.header__nav{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center
+}
+
+.header__menu-link {
     text-decoration: none;
     color: inherit; /* Los enlaces heredan el color del texto por defecto */
+    margin: 5px;
 }
 
 ul, ol {
@@ -120,6 +146,11 @@ th, td {
 th {
     background-color: #f4f4f4;
     font-weight: 600;
+}
+
+/* Footer */
+.socials{
+    font-size: 2.0rem;
 }
 
 /* Respuestas en dispositivos móviles */

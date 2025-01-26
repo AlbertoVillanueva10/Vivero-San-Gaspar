@@ -6,29 +6,35 @@
     <title>Vivero [Nombre]</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- URL para los icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body class="container">
     <!-- Encabezado -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Vivero Logo">
+    <header class="header">
+        <div class="header__logo">
+            <img class="header__logo-img" src="./img/plant.png" alt="Vivero Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+        <nav class="header__nav">
+            <ul class="header__menu" >
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#inicio">Inicio</a></li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#productos">Productos</a></li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#servicios">Servicios</a></li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Sección de Inicio -->
     <section id="inicio">
-        <div class="hero">
-            <img src="vivero.jpg" alt="Vivero">
+        <div class="inicio__hero">
+            <img class="inicio__hero-img" src="/img/background_vivero.jpeg" alt="Vivero">
             <div class="hero-text">
-                <h1>Vivero [Nombre]</h1>
+                <h1>Vivero San Gaspar</h1>
                 <p>Plantas que transforman tus espacios</p>
                 <a href="#productos" class="cta-btn">Conoce nuestras plantas</a>
             </div>
@@ -83,10 +89,14 @@
 
     <!-- Pie de Página -->
     <footer>
-        <p>&copy; 2025 Vivero [Nombre]. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Vivero San Gaspar. Todos los derechos reservados.</p>
         <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
+            <!-- <a class="" href="#">Instagram</a>
+            <a class="" href="#">Facebook</a> -->
+            
+            <a href="#"><i class='bx bxl-instagram' href="#"></i></a>
+            
+            <a href="#"><i class='bx bxl-facebook'></i></a>
         </div>
     </footer>
 
