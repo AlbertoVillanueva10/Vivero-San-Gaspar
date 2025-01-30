@@ -47,14 +47,55 @@ body {
     margin: 5px;
 }
 
+.inicio__seccion{
+    height: 100%;
+}
+
+/* The hero image */
+.inicio__hero{
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/background_vivero.jpeg");
+    
+    /* Set a specific height */
+    height: 50vh;
+    width: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.inicio__hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* background-color: #007bff; */
+}
+
+.inicio__hero-title{
+    color: #f4f4f4;
+    font-size: 2.5rem;
+}
+
+.inicio__hero--btn{
+    display: flex;
+    background-color: red;
+}
+
 ul, ol {
     list-style: none;
 }
 
-img {
+/* img {
     max-width: 100%;
-    height: auto; /* Asegura que las imágenes sean responsivas */
-}
+    height: auto; /* Asegura que las imágenes sean responsivas 
+} */
 
 /* Tipografía base */
 h1, h2, h3, h4, h5, h6 {
