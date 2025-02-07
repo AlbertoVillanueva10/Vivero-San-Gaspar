@@ -11,7 +11,7 @@ body {
     font-family: 'Arial', sans-serif; /* Se puede cambiar por cualquier fuente */
     line-height: 1.6;
     /* background:linear-gradient(#6E8E59,#EAFAEA); Fondo blanco por defecto */
-    
+
     color: #333; /* Texto oscuro */
     font-size: 16px;
     min-width: 320px; /* Asegura que la página sea usable en móviles */
@@ -23,7 +23,7 @@ ul, ol {
 
 /* img {
     max-width: 100%;
-    height: auto; /* Asegura que las imágenes sean responsivas 
+    height: auto; /* Asegura que las imágenes sean responsivas
 } */
 
 /* Tipografía base */
@@ -40,8 +40,8 @@ p {
 
 /* Contenedores y elementos flexibles */
 .container {
-    width: 90%;
-    max-width: 1200px;
+    /* width: 90%; */
+    max-width: 1500px;
     margin: 0 auto; /* Centrado horizontal */
     text-align: center;  /* Centra el texto del contenedor*/
 }
@@ -118,10 +118,25 @@ th {
     font-weight: 600;
 }
 
+.main__section{
+    /* height: 50vh; */
+    background-image: linear-gradient(to top, rgba(46, 49, 65, 0.4), rgba(46, 49, 65, 0.4)), url(/img/background_vivero_2.jpeg);
+    background-attachment: fixed; /* Parallax: la imagen no se mueve */
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    /* background-size: auto, cover;
+    background-position: center, center; */
+}
+
 .header{
     display: flex;
-    max-width: 1200px;
-    margin: 20px 0px;
+    /* max-width: 1200px; */
+    /* margin: 20px 0px; */
+    padding: 30px 25px 0px 25px;
     align-content: stretch;
     justify-content: space-between;
     height: 100%;
@@ -147,17 +162,22 @@ th {
     text-decoration: none;
     color: inherit; /* Los enlaces heredan el color del texto por defecto */
     margin: 5px;
+    color: #f4f4f4;
 }
 
 .main__seccion{
-    height: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* The hero image */
 .main__hero{
       /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/background_vivero.jpeg");
-    
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/background_vivero.jpeg"); */
+
+
     /* Set a specific height */
     height: 50vh;
     width: 100%;
@@ -172,10 +192,10 @@ th {
 
 .main__hero-text {
     text-align: center;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);  /* Propiedad para alinear contenedor en hero*/
     color: white;
     /* background-color: #007bff; */
 }
@@ -186,37 +206,45 @@ th {
 }
 
 .subtitle{
-    margin: 40px;
+    position:relative;
+    padding: 30px 0px 40px 0px;
+    /* z-index: 2; */
+    /* padding: 40px; */
     font-size: 2rem;
     /* display: inline;
     border-bottom: 1px solid black; */
 }
 
 .subtitle__txt{
-    
-    
+
+
 }
 
 
 .products__section{
-    background-color: #fbfbfb;
-
+    padding: 30px;
+    /* background:linear-gradient(#C4DAD2,#E9EFEC); Fondo blanco por defecto */
+    /* background-color: #DDF7E3; */
+    background-color: #5B8590;
+    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); Corta la parte inferior */
 }
 
-.divider{
+/* .divider{
     display: flex;
     align-self: center;
-    background-color: #ccc;
+    background-color: red;
     border: solid .5px gray;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     width: 100%;
-    margin: 50px 0px 50px 0px;
-}
+    height: 10px;
+    margin: 50px 0px 0px 0px;
+} */
 
 .products__list{
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
     gap: 20px; /* Espacio entre elementos */
+    margin-bottom: 70px;
     /* background-color: antiquewhite; */
 }
 
@@ -224,8 +252,8 @@ th {
     margin-top: 20px;
     width: 100%;
     height: 200px;
-    /* overflow: hidden; Para que no sobre salga la imagen*/ 
-    
+    /* overflow: hidden; Para que no sobre salga la imagen*/
+
 }
 
 .products__category-img{
@@ -243,12 +271,64 @@ th {
     border-radius: 100px;
 }
 
-.services__section{
-    
-    
+.products__category-txt{
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
+.services__section{
+    display: grid;
+    justify-items: center;
+    position: relative;
+    /* overflow: hidden; */
+    /* z-index: 1; */
+    width: 100%;
+    margin: 0 auto;
+    /* background:linear-gradient(#E9EFEC,#C4DAD2); Fondo blanco por defecto */
+    /* background-color: #C7E8CA; */
+    background-color: #74A4A2;
+    padding-bottom: 40px;
+}
+
+/* pseudo-elemento en CSS que te permite agregar contenido antes del contenido real de un elemento, sin necesidad de modificar el HTML. */
+.services__section::before {
+    content: "";
+    position: absolute;
+    top: -50px; /* Mueve la inclinación hacia arriba */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Altura del efecto */
+    background: inherit; /* Mantiene el color de la sección */
+    /* background: rgba(255, 0, 0, 0.3); Rojo semi-transparente para pruebas */
+    transform: skewY(-3deg); /* Inclinación */
+    /* z-index: -1; Envía el pseudo-elemento al fondo */
+    pointer-events: none; /* Evita que bloquee clics en los enlaces */
+}
+
+.services__section::after {
+    content: "";
+    position: absolute;
+    top: 600px; /* Mueve la inclinación hacia arriba */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Altura del efecto */
+    background: rgba(255, 0, 0, 0.3); 
+
+    transform: skewY(3deg); /* Inclinación */
+    /* z-index: -1; Envía el pseudo-elemento al fondo */
+    pointer-events: none; /* Evita que bloquee clics en los enlaces */
+}
+
+
+.services__section a {
+    position: relative;
+    /* z-index: 2;  */
+    /* Evita que los enlaces queden detrás del efecto */
+}
+
+
 .services__category{
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -265,6 +345,11 @@ th {
     transition: transform 0.3s ease-in-out;  /* Movimiento lento*/
 }
 
+.services__category-img:hover{
+    transform: scale(1.05);
+    border-radius: 50px;
+}
+
 .services_category-txt--left{
     font-size: 1.5rem;
 }
@@ -273,17 +358,34 @@ th {
     font-size: 1.5rem;
 }
 
+.contact__section{
+    /* background:linear-gradient(#C4DAD2,#6A9C89); */
+    /* background-color: #B3C99C; */
+    background-color: #D47E60;
+    justify-items: center;
+    position: relative;
+    /* overflow: hidden; */
+    /* z-index: 1; */
+    width: 100%;
+    margin: 0 auto;
+    /* background:linear-gradient(#E9EFEC,#C4DAD2); Fondo blanco por defecto */
+    /* background-color: #C7E8CA; */
+    padding-bottom: 40px;
+}
+
 .contact__form{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #fbfbfb;
+    justify-items: center;
+
 }
 
 .contact__form-fields{
     display: flex;
     flex-direction: column;
     width: 90%;
-    
+
 }
 
 .contact__form-txt,
@@ -296,7 +398,7 @@ th {
 .contact__form-textarea{
     background-color: rgba(0, 0, 0, 0.1);
     border: solid 2px rgba(255, 255, 255, 0.125);
-    
+
 }
 
 .contact__form-textarea{
@@ -309,9 +411,14 @@ th {
 
 
 /* Footer */
+.footer{
+    background-color: #343133;
+}
+
 .socials{
     font-size: 2.0rem;
 }
+
 
 
 

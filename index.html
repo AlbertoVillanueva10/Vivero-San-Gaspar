@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivero San Gaspar</title>
+    <link rel="icon" type="image/png" href="img/plant.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- URL para los icons -->
@@ -11,25 +12,25 @@
 </head>
 <body class="container">
     <!-- Encabezado -->
-    <header class="header">
-        <div class="header__logo">
-            <img class="header__logo-img" src="./img/plant.png" alt="Vivero Logo">
-        </div>
-        <nav class="header__nav">
-            <ul class="header__menu" >
-                <li class="header__menu-item">
-                    <a class="header__menu-link" href="#main">Inicio</a></li>
-                <li class="header__menu-item">
-                    <a class="header__menu-link" href="#products">Productos</a></li>
-                <li class="header__menu-item">
-                    <a class="header__menu-link" href="#services">Servicios</a></li>
-                <li class="header__menu-item">
-                    <a class="header__menu-link" href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
     <!-- Sección de main -->
     <section class="main__section" id="main">
+        <header class="header">
+            <div class="header__logo">
+                <img class="header__logo-img" src="./img/plant.png" alt="Vivero Logo">
+            </div>
+            <nav class="header__nav">
+                <ul class="header__menu" >
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#main">Inicio</a></li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#products">Productos</a></li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#services">Servicios</a></li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
         <div class="main__hero">
             <!-- <img class="main__hero-img" src="" alt=""> -->
             <div class="main__hero-text">
@@ -46,31 +47,31 @@
         <h2 class="subtitle">Algunos de nuestros Productos</h2>
         <div class="products__list">
             <div class="products__category">
-                <a href="#"><img class="products__category-img" src="/img/plant.png" alt="Planta 1"></a>
-                <p>Plantas Frutales</p>
+                <a href="#"><img class="products__category-img" src="/img/fruits.png" alt="Planta 1"></a>
+                <p class="products__category-txt">Plantas Frutales</p>
             </div>
             <div class="products__category">
-                <a href="#"><img class="products__category-img" src="/img/plant.png" alt="Planta 1"></a>
-                <p>Hortalizas</p>
+                <a href="#"><img class="products__category-img" src="/img/hortaliza.png" alt="Planta 1"></a>
+                <p class="products__category-txt">Hortalizas</p>
             </div>
             <div class="products__category">
-                <a href="#"><img class="products__category-img" src="/img/plant.png" alt="Planta 1"></a>
-                <p>Plantas Aromaticas y medicinales</p>
+                <a href="#"><img class="products__category-img" src="/img/aroma.png" alt="Planta 1"></a>
+                <p class="products__category-txt">Plantas Aromaticas y medicinales</p>
             </div>
             <div class="products__category">
-                <a href="#"><img class="products__category-img" src="/img/plant.png" alt="Planta 1"></a>
-                <p>Plantas de Ornato (Decorativas)</p>
+                <a href="#"><img class="products__category-img" src="/img/decorativa.png" alt="Planta 1"></a>
+                <p class="products__category-txt">Plantas de Ornato (Decorativas)</p>
             </div>
             <div class="products__category">
-                <a href="#"><img class="products__category-img" src="/img/plant.png" alt="Planta 1"></a>
-                <p>Plantas de Interior</p>
+                <a href="#"><img class="products__category-img" src="/img/interior.png" alt="Planta 1"></a>
+                <p class="products__category-txt">Plantas de Interior</p>
             </div>
             <div class="products__category">
-                <a href="#"><img class="products__category-img" src="/img/plant.png" alt="Planta 1"></a>
-                <p>Cactus y Suculentas</p>
+                <a href="#"><img class="products__category-img" src="/img/cactus.png" alt="Planta 1"></a>
+                <p class="products__category-txt">Cactus y Suculentas</p>
             </div>
         </div>
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
     </section>
     
 
@@ -119,7 +120,7 @@
     </section>
 
     <!-- Pie de Página -->
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025 Vivero San Gaspar. Todos los derechos reservados.</p>
         <div class="socials">
             <!-- <a class="" href="#">Instagram</a>
