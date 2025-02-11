@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--)
 }
 
 body {
@@ -172,15 +173,12 @@ th {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
+
 
 /* The hero image */
 .main__hero{
-      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/background_vivero.jpeg"); */
-
-
-    /* Set a specific height */
     height: 50vh;
     width: 100%;
 
@@ -189,6 +187,7 @@ th {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    transform: skew();
 }
 
 
@@ -223,24 +222,76 @@ th {
 }
 
 
-.products__section{
-    padding: 30px;
-    /* background:linear-gradient(#C4DAD2,#E9EFEC); Fondo blanco por defecto */
-    /* background-color: #DDF7E3; */
+.who-we-are{
+    position: relative;
     background-color: #E9EFEC;
+}
+
+.who-we-are__subtitle{
+    position: relative;
+}
+
+.who-we-are__container{
+    display: flex;
+    justify-content:space-around;
+    height: 330px;
+}
+
+.who-we-are::before{
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #E9EFEC;
+    transform: skewY(-3deg);
+    margin-bottom: 10px;
+}
+
+.who-we-are__container-txt{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 90px;
+    width: 50%;
+}
+
+.who-we-are__badge-logo{
+    width: 350px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+
+
+.products__section{
+    position: relative;
+    padding-bottom: 30px ;
+    background-color: #89A8B2;
     /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); Corta la parte inferior */
 }
 
-/* .divider{
+.products__section::before{
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 100%;
+    height: 90px;
+    transform: skewY(3deg); /* Inclinación */
+    background-color: #89A8B2;
+    margin-top: 10px;
+}
+
+.divider{
     display: flex;
     align-self: center;
     background-color: red;
     border: solid .5px gray;
     margin: 0 auto;
-    width: 100%;
-    height: 10px;
-    margin: 50px 0px 0px 0px;
-} */
+    width: 90%;
+    margin: 50px 0px 50px 0px;
+}
 
 .products__list{
     display: grid;
@@ -274,8 +325,11 @@ th {
 }
 
 .products__category-txt{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
+    /* color: #E9EFEC; */
+    color: white;
+    
 }
 
 .services__section{
@@ -287,7 +341,7 @@ th {
     width: 100%;
     margin: 0 auto;
     /* background-color: #5b8590; */
-    background-color: #89A8B2;
+    background-color: #E9EFEC;
     padding-bottom: 40px;
 }
 
@@ -298,9 +352,9 @@ th {
     top: -50px; /* Mueve la inclinación hacia arriba */
     left: 0;
     width: 100%;
-    height: 100%; /* Altura del efecto */
+    height: 100px; /* Altura del efecto */
     background: inherit; /* Mantiene el color de la sección */
-    background-color: #89A8B2;
+    background-color: #E9EFEC;
     /* background-color: #5b85906b;  Color deseado*/
     /* background: rgba(255, 0, 0, 0.3); Rojo semi-transparente para pruebas */
     transform: skewY(-3deg); /* Inclinación */
@@ -311,7 +365,7 @@ th {
 
 .services__section a {
     position: relative;
-    color: #E9EFEC;
+    /* color: #E9EFEC; */
     letter-spacing: 1px;
     /* z-index: 2;  */
     /* Evita que los enlaces queden detrás del efecto */
@@ -350,16 +404,20 @@ th {
 }
 
 .contact__section{
-    /* background-color: #D47E60; */
-    background-color: #E9EFEC;
-    justify-items: center;
+    /* background-color: #89A8B2; */
+    background-image: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url(/img/background_vivero_2.jpeg);
+    background-attachment: fixed; /* Parallax: la imagen no se mueve */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
+    justify-items: center;
     /* overflow: hidden; */
     /* z-index: 1; */
     width: 100%;
     margin: 0 auto;
     /* background-color: #C7E8CA; */
-    padding: 70px 0px 40px 0px;
+    padding: 70px 0px 0px 0px;
 }
 
 .contact__section::before {
@@ -368,14 +426,17 @@ th {
     top: -50px; /* Mueve la inclinación hacia arriba */
     left: 0;
     width: 100%;
-    height: 100px; /* Altura del efecto */
-    background-color: #89A8B2; /* Mantiene el color de la sección */
+    height: 90px; /* Altura del efecto */
+    background-color: #E9EFEC; /* Mantiene el color de la sección */
     /* background: rgba(255, 0, 0, 0.3); Rojo semi-transparente para pruebas */
     transform: skewY(3deg); /* Inclinación */
     /* z-index: -1; Envía el pseudo-elemento al fondo */
     pointer-events: none; /* Evita que bloquee clics en los enlaces */
 }
 
+.contact__section-subtitle{
+    color: #E9EFEC;
+}
 
 .contact__form{
     display: grid;
@@ -397,12 +458,14 @@ th {
     display: flex;
     align-items: flex-start;
     margin-left: 10px;
+    color: white;
 }
+
 .contact__form-input,
 .contact__form-textarea{
-    background-color: rgba(0, 0, 0, 0.1);
-    border: solid 2px rgba(255, 255, 255, 0.125);
-
+    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: white; */
+    border: solid 2px rgba(255, 255, 255, 0.5);
 }
 
 .contact__form-textarea{
@@ -416,12 +479,12 @@ th {
 
 /* Footer */
 .footer{
-    background-color: rgb(52, 49, 51);    
+    /* background-color: rgb(52, 49, 51);     */
     color: #E9EFEC;
 }
 
 .footer__txt{
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .socials{
