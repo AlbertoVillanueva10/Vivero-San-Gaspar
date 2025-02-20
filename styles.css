@@ -1,3 +1,8 @@
+:root{
+    --white-color: #f4f4f4;
+    --link-dark-color: blue;
+}
+
 /* Reset global */
 *,
 *::before,
@@ -98,9 +103,9 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
     text-decoration: underline;
-}
+} */
 
 /* Estilos de tablas */
 table {
@@ -149,9 +154,9 @@ th {
     flex-direction: row;
 }
 
-.header__logo-img{
-    width: 100px;
-    height: 100px;
+.header__logo-img {
+    width: 150px;
+    height: 150px;
 }
 
 .header__nav{
@@ -161,20 +166,29 @@ th {
 }
 
 .header__menu-link {
+    position: relative;
     text-decoration: none;
-    color: inherit; /* Los enlaces heredan el color del texto por defecto */
     margin: 10px;
-    color: #f4f4f4;
+    color: var(--white-color);
     letter-spacing: 1px;
+    display: inline-block;
 }
 
-.main__seccion{
-    /* height: 100vh; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+.header__menu-link::after{
+    content: "";
+    position: absolute;
+    bottom: -1px; /* Ajusta la distancia de la línea con respecto al texto */
+    left: 0;
+    width: 0;
+    height: 2px; /* Grosor de la línea */
+    background-color: var(--white-color);
+    transition: width 300ms ease-in-out;
 }
+
+.header__menu-link:hover::after{
+    width: 100%;
+}
+
 
 
 /* The hero image */
