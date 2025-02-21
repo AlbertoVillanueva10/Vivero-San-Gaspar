@@ -560,15 +560,23 @@ th {
 
 @media (max-width: 767px) {
     body{
-        background-color: aqua;
+        /* background-color: aqua; */
         font-size: 12px;
     }    
+
+    .container {
+        width: 95%;
+    }
+
     .header{
         display: none;
     }
 
-    .container {
-        width: 95%;
+    /** HERO SECTION*/
+
+    .main__hero{
+        height: 70dvh;
+        object-fit: cover;
     }
 
     /** WHO WE ARE SECTION */
@@ -644,6 +652,13 @@ th {
 
     .services__category-img{
         width: 330px;
+    }
+
+    /** CONTACT SECTION*/
+    .contact__section{
+        /* background-color: #007bff; */
+        height: 100%;
+        object-fit: cover;
     }
 
     .contact__form{
