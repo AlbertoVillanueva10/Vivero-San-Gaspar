@@ -579,6 +579,10 @@ th {
         object-fit: cover;
     }
 
+    .main__section{
+        background-attachment: inherit;
+    }
+
     /** WHO WE ARE SECTION */
 
     .who-we-are__container {
@@ -588,6 +592,7 @@ th {
         flex-wrap: wrap;
         align-content: center;
         padding-bottom: 50px;
+        background-color: #0056b3;
     }
 
     .who-we-are__subtitle {
@@ -658,12 +663,13 @@ th {
     .contact__section{
         /* background-color: #007bff; */
         height: 100%;
-        object-fit: cover;
+        background-attachment: inherit;
     }
 
     .contact__form{
-        width: 90%;
-        display: block;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .contact__form-message{
