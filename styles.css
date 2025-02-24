@@ -125,6 +125,12 @@ th {
     font-weight: 600;
 }
 
+/*Hidden menu hamburguer in desktop*/
+.btn__menu-ham,
+.container__menu-ham{
+    display: none;
+}
+
 .main__section{
     /* height: 50vh; */
     background-image: linear-gradient(to top, rgba(46, 49, 65, 0.4), rgba(46, 49, 65, 0.4)), url(./img/background_vivero_2.jpeg);
@@ -281,6 +287,7 @@ th {
     width: 350px;
     height: 200px;
     border-radius: 30px;
+    margin: 10px 0px 0px 0px;
 }
 
 
@@ -565,17 +572,103 @@ th {
     }    
 
     .container {
-        width: 95%;
+        width: 100%;
     }
 
-    .header{
+    /**HAMBURGUER MENU  */
+    .header__nav{
         display: none;
+    }
+
+
+    .btn__menu-ham{
+        background-color: rgba(255,255,255, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 2.5rem;
+        /* background-color: #007bff; */
+    }
+
+    .btn__menu-ham--close{
+        font-size: 2rem;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn__menu-ham--close:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #333;
+    }
+
+    .close{
+        display: none;
+    }
+
+    .open{
+        display: inline-block;
+    }
+
+    .btn__menu-ham:hover{
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.2);
+        font-size: 2.7rem;
+        transition: all 250ms;
+    }
+
+    .container__menu-ham.open{
+        display: flex;
+        background-color: #89A8B2;
+        flex-direction: column;
+        font-size: 1rem;
+        gap: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        /* background-color: white; */
+        border: solid 2px rgba(255, 255, 255, 0.5);
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 30px 25px 0px 0px;
+    }
+
+    .container__menu-ham{
+        justify-content: center;
+    }
+
+    .menu__link-ham {
+        color: var(--white-color);
+        position: relative;
+        text-decoration: none;
+        margin: 10px;
+        color: var(--white-color);
+        letter-spacing: 1px;
+        /* display: inline-block; */
+    }
+    
+    .menu__link-ham::after{
+        content: "";
+        position: absolute;
+        bottom: -1px; /* Ajusta la distancia de la línea con respecto al texto */
+        left: 0;
+        width: 0;
+        height: 2px; /* Grosor de la línea */
+        background-color: var(--white-color);
+        transition: width 300ms ease-in-out;
+    }
+    
+    .menu__link-ham:hover::after{
+        width: 100%;
+    }
+
+
+    .main__hero-text{
+        font-size: 1rem;
     }
 
     /** HERO SECTION*/
 
     .main__hero{
-        height: 70dvh;
+        height: 40dvh;
         object-fit: cover;
     }
 
@@ -604,6 +697,12 @@ th {
         width: 90%;
         /* background-color: #0056b3; */
         margin-bottom: 20px;
+    }
+
+    .who-we-are__badge-logo{
+        width: 250px;
+        /* border-radius: 30px; */
+        margin: 20px 0px 0px 0px;
     }
 
     /** PRODUCTS SECTION */
