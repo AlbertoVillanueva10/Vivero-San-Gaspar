@@ -8,7 +8,18 @@ openMenuHam.addEventListener('click', () => {
 })
 
 closeMenuHam.addEventListener('click',() => {
-    // menuListHam.classList.toggle('close')
+    openMenuHam.classList.remove('close')
+    menuListHam.classList.remove('open')
+})
+
+// ** Asegurando uso de dispositivos mobiles
+
+openMenuHam.addEventListener('touchstart', () => {
+    menuListHam.classList.toggle('open')
+    openMenuHam.classList.toggle('close')
+})
+
+closeMenuHam.addEventListener('touchstart',() => {
     openMenuHam.classList.remove('close')
     menuListHam.classList.remove('open')
 })
