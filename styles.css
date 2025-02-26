@@ -222,6 +222,12 @@ th {
     /* background-color: #007bff; */
 }
 
+/* Ocultando imagen logo Desktop */
+.container__header__logo-img--txt,
+.header__logo-img--txt{
+    display: none;
+}
+
 .main__hero-title{
     color: #f4f4f4;
     font-size: 3.5rem;
@@ -571,37 +577,60 @@ th {
         font-size: 12px;
     }    
 
-    .opacity{
-        /* position: fixed;
+    /* Clase para difuminar el fondo al abrir el menu */
+    .overlay{
+        position: fixed;
         top: 0;
         left: 0;
-        width: 50%;
-        height: 50%;
-        background: rgba(255, 255, 255, 0.1); 
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+        backdrop-filter: blur(3px); /* Aplica desenfoque */
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease-in-out;
-        z-index: 1000; */
+        z-index: 999;
     }
+
+    /* Al presionar el boton hamburguesa, aplicar el fondo borroso */
+    .overlay.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+
 
     .container {
         width: 100%;
     }
 
     /**HAMBURGUER MENU  */
+
+    .header{
+        justify-content: end;
+        height: 160px;
+        /* align-items: center; */
+    }
+
+    .header__logo{
+        display: none;
+    }
+
     .header__nav{
         display: none;
     }
 
 
     .btn__menu-ham{
-        background-color: rgba(255,255,255, 0);
+        /* background-color: rgba(255,255,255, 0); */
+        background-color: transparent;
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
         font-size: 2.5rem;
-        /* background-color: #007bff; */
-        height: 100%;
+        height: 40px;
+        width: 45px;
+        padding: 0px;;
     }
 
     .btn__menu-ham--close{
@@ -676,7 +705,6 @@ th {
         position: relative;
         text-decoration: none;
         margin: 10px;
-        color: var(--white-color);
         letter-spacing: 1px;
         /* display: inline-block; */
     }
@@ -706,7 +734,46 @@ th {
     .main__hero{
         height: 40dvh;
         object-fit: cover;
+        padding-bottom: 130px;
     }
+
+    /* Ocultando letras Vivero San Gaspar*/
+    .main__hero .main__hero-title{
+        display: none;
+    }
+    /* Agregando img logo dispositivos moviles */
+    .container__header__logo-img--txt,
+    .header__logo-img--txt{
+        display: flex;
+    }
+
+    .container__header__logo-img--txt{
+        width: 100%;
+        height: 150px;
+        /* background-color: red; */
+        justify-content: center;
+    }
+
+    .header__logo-img--txt{
+        width: 200px;
+        height: 200px;
+        /* background-color: #007bff; */
+    }
+    /* Margin del divider (linea divisora entre img y texto) */
+    .divider--two{
+        margin: 0 auto;
+        border:solid .5px gray;
+        width: 90%;
+        /* padding: 10px 0px; */
+    }
+
+    .main__hero-description{
+        padding-top: 10px;
+    }
+
+    .main__hero .header__logo-img{
+        display: block;
+    }   
 
     .main__section{
         background-attachment: inherit;
