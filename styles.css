@@ -195,9 +195,12 @@ th {
     width: 100%;
 }
 
+/* Ocultando el elemento para verse el header correctamente en desktop */
+.overlay{
+    display: none
+}
 
-
-/* The hero image */
+/* La imagen del hero */
 .main__hero{
     height: 50vh; /* Para navegadores */
     height: 70dvh;  /* Para dispositivos moviles */
@@ -438,13 +441,15 @@ th {
 
 .contact__section{
     /* background-color: #89A8B2; */
+    
     background-image: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url(./img/background_vivero_2.jpeg);
-    background-attachment: fixed; /* Parallax: la imagen no se mueve */
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     justify-items: center;
+    
     /* overflow: hidden; */
     /* z-index: 1; */
     width: 100%;
@@ -579,6 +584,7 @@ th {
 
     /* Clase para difuminar el fondo al abrir el menu */
     .overlay{
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
@@ -588,7 +594,7 @@ th {
         backdrop-filter: blur(3px); /* Aplica desenfoque */
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
         z-index: 999;
     }
 
@@ -649,6 +655,8 @@ th {
 
     .open{
         display: inline-block;
+        /* right: 0; */
+
     }
 
     .btn__menu-ham:hover{
@@ -694,13 +702,17 @@ th {
         z-index: 1001;
         opacity: 1;
         padding: 20px;
+
+        /* backdrop-filter: blur(5px);
+        right: -100%;
+        transition: right 0.5s ease-in-out; */
     }
 
     .container__menu-ham{
         justify-content: center;
     }
 
-    .menu__link-ham {
+    .menu__ham-link {
         color: var(--white-color);
         position: relative;
         text-decoration: none;
@@ -709,7 +721,7 @@ th {
         /* display: inline-block; */
     }
     
-    .menu__link-ham::after{
+    .menu__ham-link::after{
         content: "";
         position: absolute;
         bottom: -1px; /* Ajusta la distancia de la línea con respecto al texto */
@@ -720,7 +732,7 @@ th {
         transition: width 300ms ease-in-out;
     }
     
-    .menu__link-ham:hover::after{
+    .menu__ham-link:hover::after{
         width: 100%;
     }
 
