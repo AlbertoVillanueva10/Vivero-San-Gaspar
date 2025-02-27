@@ -151,7 +151,7 @@ th {
     /* margin: 20px 0px; */
     padding: 30px 25px 0px 25px;
     align-content: stretch;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 100%;
 }
 
@@ -879,7 +879,8 @@ th {
         background-attachment: inherit;
     }
 
-    .contact__form{
+    /**PENDIENTE */
+    /* .contact__form{
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
@@ -887,6 +888,17 @@ th {
 
     .contact__form-message{
         margin-bottom: 40px;
+    }
+     */
+    .contact__section-socials{
+        display: flex;
+        height: 100%;
+        padding-bottom: 20px;
+    }
+
+    .contact__section-links img{
+        height: 150px;
+        width: 150px;
     }
 
     .section__location{
