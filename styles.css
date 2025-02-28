@@ -327,7 +327,7 @@ th {
     border: solid .5px gray;
     margin: 0 auto;
     width: 90%;
-    margin: 50px 0px 50px 0px;
+    margin: 50px 0px 35px 0px;
 }
 
 .products__list{
@@ -439,6 +439,8 @@ th {
     font-size: 1.5rem;
 }
 
+/** SECCION CONTACTO */
+
 .contact__section{
     /* background-color: #89A8B2; */
     
@@ -477,6 +479,17 @@ th {
     color: #E9EFEC;
 }
 
+.contact__section-socials{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    width: 90%;
+}
+
+.contact__section-links img{
+    width: 100px;
+}
+
 .contact__form{
     display: grid;
     width: 90%;
@@ -512,8 +525,18 @@ th {
     height: 150px;
 }
 
-.section__location{
-    width: 90%;
+.section__location--desktop{
+    width: 100%;
+    align-content: center;
+}
+
+.section__location--mobile{
+    display: none;
+}
+
+.location{
+    display: grid;
+    width: 100%;
 }
 
 
@@ -879,38 +902,54 @@ th {
         background-attachment: inherit;
     }
 
-    /**PENDIENTE */
-    /* .contact__form{
+    /**Ocultando form seccion en mobile */
+
+    .contact__form{
+        display: none;
         width: 100%;
-        display: grid;
+        /* display: grid; */
         grid-template-columns: 1fr;
     }
 
     .contact__form-message{
         margin-bottom: 40px;
     }
-     */
+    
     .contact__section-socials{
         display: flex;
-        height: 100%;
-        padding-bottom: 20px;
+        height: 100px;
+        margin-bottom: 30px;
+        /* background-color: red; */
+        width: 90%;
+        justify-content: space-around;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        align-items: center;
     }
 
     .contact__section-links img{
-        height: 150px;
-        width: 150px;
+        height: 50px;
+        width: 50px;
     }
 
-    .section__location{
+    .section__location--mobile{
         display: flex;
-        width: 300px;
+        justify-content: center;
+        width: 90%;
+        height: 300px;
     }
     .location{
-        width: 300px;
+        width: 100%;
+        height: 200px;
     }
 
     iframe{
-        max-width: 300px;
+        width: 350px;
+        height: 300px;
+    }
+
+    .footer{
+        padding-bottom: 10px;
     }
 
 }
