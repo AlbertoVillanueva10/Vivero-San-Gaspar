@@ -535,7 +535,7 @@ th {
 }
 
 .location{
-    display: grid;
+    /* display: grid; */
     width: 100%;
 }
 
