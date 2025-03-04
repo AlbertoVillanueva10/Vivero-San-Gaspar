@@ -492,7 +492,7 @@ th {
 
 .contact__form{
     display: grid;
-    width: 90%;
+    /* width: 90%; */
     grid-template-columns: 1fr 1fr;
     /* background-color: #fbfbfb; */
     justify-items: center;
@@ -637,7 +637,7 @@ th {
 
     .header{
         justify-content: end;
-        height: 160px;
+        height: 135px;
         /* align-items: center; */
     }
 
@@ -935,12 +935,12 @@ th {
     .section__location--mobile{
         display: flex;
         justify-content: center;
-        width: 90%;
+        /* width: 90%; */
         height: 300px;
     }
     .location{
         width: 100%;
-        height: 200px;
+        /* height: 200px; */
     }
 
     iframe{
