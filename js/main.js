@@ -36,6 +36,14 @@ btnXCloseMenuHam.addEventListener('click',() => {
 
 // //** Al presionar el menu hamburguesa cerrar el menu */
 
+anyLinkMenuHamSelected.forEach(link => {
+    link.addEventListener('click', () => {
+        console.log("entro foreach click")
+        containerMenuHam.classList.toggle('open') //remueve la clase open al presionar cualquier link con el metodo toogle
+        blurBackground.classList.toggle('visible')//remueve la clase visible al presionar cualquier link con el metodo toogle
+        //btnOpenMenuHam.classList.toggle('open')
+    })
+})
 
 // anyLinkMenuHamSelected.forEach(link => {
 //     link.addEventListener('touchstart', () => {
@@ -46,14 +54,6 @@ btnXCloseMenuHam.addEventListener('click',() => {
 //     })
 // })
 
-// anyLinkMenuHamSelected.forEach(link => {
-//     link.addEventListener('click', () => {
-//         console.log("entro foreach click")
-//         containerMenuHam.classList.toggle('open')
-//         blurBackground.classList.toggle('visible')
-//         btnOpenMenuHam.classList.toggle('open')
-//     })
-// })
 
 // anyLinkMenuHamSelected.forEach(link => {
 //     link.addEventListener('click', () => {
