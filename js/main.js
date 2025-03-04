@@ -11,6 +11,8 @@ btnOpenMenuHam.addEventListener('click', () => {
     containerMenuHam.classList.toggle('open')
     // ** Agrega el efecto borroso al resto de la pantalla, fuera del menu
     blurBackground.classList.toggle('visible')
+
+    btnOpenMenuHam.classList.toggle('close')
 })
 
 btnXCloseMenuHam.addEventListener('click',() => {
@@ -18,6 +20,8 @@ btnXCloseMenuHam.addEventListener('click',() => {
     containerMenuHam.classList.toggle('open')
     // ** Remueve la clase visible de la clase overlay
     blurBackground.classList.toggle('visible')
+
+    btnOpenMenuHam.classList.toggle('close')
 })
 
 // ** Asegurando uso de dispositivos mobiles
