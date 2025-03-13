@@ -953,3 +953,10 @@ th {
     }
 
 }
+
+
+/* Adding the total of media querys */
+/* @media (max-width:550px
+@media (max-width:768px)
+@media (min-width:769px) 
+@media (min-width:1000px) */
